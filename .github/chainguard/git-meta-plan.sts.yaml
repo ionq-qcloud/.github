@@ -1,0 +1,9 @@
+# Read-only twin, mintable from pull_request runs — gives PRs a real plan against ionq-qcloud.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:ionq/git-meta:pull_request
+claim_pattern:
+  enterprise: "^ionq$"
+permissions:
+  members: read
+  organization_custom_org_roles: read
+  metadata: read

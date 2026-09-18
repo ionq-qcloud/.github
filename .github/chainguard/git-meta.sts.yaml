@@ -1,0 +1,9 @@
+# Org-scoped policy for ionq-qcloud, granting ionq/git-meta write access to team membership.
+issuer: https://token.actions.githubusercontent.com
+subject_pattern: "^repo:ionq/git-meta:(ref:refs/heads/main|ref:refs/heads/gh-readonly-queue/main/.*)$"
+claim_pattern:
+  enterprise: "^ionq$"
+permissions:
+  members: write
+  organization_custom_org_roles: write
+  metadata: read
