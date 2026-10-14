@@ -1,0 +1,10 @@
+# Runner registration for the Q-Cloud EKS runner platform (test org,
+# Qcloud-Test-Artifacts 391519094418, cluster qcloud-artifacts-use2-runners-eks).
+# Exchanged by the arc-token-refresher CronJob (qcloud-runners-infra,
+# modules/arc) every 30 minutes for the short-lived token ARC registers
+# runners with -- no GitHub App key or PAT exists anywhere in the platform.
+# Design: PLAN -- Shared CI Runners (Confluence 1052311587), Stage C3.
+issuer: https://oidc.eks.us-east-2.amazonaws.com/id/23322F1E2E2D1A711F7EFCC734B77209
+subject: system:serviceaccount:arc-systems:arc-token-refresher
+permissions:
+  organization_self_hosted_runners: write
